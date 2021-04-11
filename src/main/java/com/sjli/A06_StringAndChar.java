@@ -1,6 +1,6 @@
 package com.sjli;
 
-public class CharAndString {
+public class A06_StringAndChar {
     public static void main(String[] args) {
     //字符类型
         // 字符类型char是基本数据类型，它是character的缩写。一个char保存一个Unicode字符：

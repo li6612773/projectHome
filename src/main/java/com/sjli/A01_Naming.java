@@ -1,6 +1,6 @@
 package com.sjli;
 
-public class Naming {
+public class A01_Naming {
 
     /* Java命名规范：
 

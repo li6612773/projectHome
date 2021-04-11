@@ -1,6 +1,6 @@
 package com.sjli;
 
-public class Arithmetic {
+public class A05_Arithmetic {
     public static void main(String[] args) {
         // 四则运算
         int i = (100 + 200) * (99 - 88); // 3300

@@ -1,6 +1,6 @@
 package com.sjli;
 
-public class ArithmeticBoolean {
+public class A04_ArithmeticBoolean {
 }
 /*
 布尔运算

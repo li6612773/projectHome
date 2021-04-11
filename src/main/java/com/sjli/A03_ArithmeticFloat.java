@@ -1,6 +1,6 @@
 package com.sjli;
 
-public class ArithmeticFloat {
+public class A03_ArithmeticFloat {
 }
 /*
 浮点数运算

@@ -1,6 +1,6 @@
 package com.sjli;
 
-public class DataType {
+public class A02_DataType {
     public static void main(String[] args) {
 
 /*       各种变量占内存大小：
