@@ -1,6 +1,6 @@
 package com.sjli;
 
-public class A25_OOP_Function_Overload {
+public class A23_OOP_Function_Overload {
     public static void main(String[] args) {
     //方法重载
         //在一个类中，我们可以定义多个方法。如果有一系列方法，它们的功能都是类似的，只有参数有所不同，那么，

@@ -1,6 +1,6 @@
 package com.sjli;
 
-public class A26_OOP_Function_Inheritance {
+public class A22_OOP_Class_Inheritance {
     public static void main(String[] args) {
 
     }
