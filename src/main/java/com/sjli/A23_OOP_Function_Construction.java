@@ -1,6 +1,6 @@
 package com.sjli;
 
-public class A24_OOP_Function_Construction {
+public class A23_OOP_Function_Construction {
     public static void main(String[] args) {
     //构造方法
         //创建实例的时候，我们经常需要同时初始化这个实例的字段，例如：
