@@ -4,8 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- groupId类似于Java的包名，通常是公司或组织名称 -->
     <groupId>org.example</groupId>
+    <!--artifactId类似于Java的类名，通常是项目名称-->
     <artifactId>projectHome</artifactId>
+    <!--再加上version，一个Maven工程就是由groupId，artifactId和version作为唯一标识。-->
     <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
@@ -24,5 +27,11 @@
         <maven.compiler.source>16</maven.compiler.source>
         <maven.compiler.target>16</maven.compiler.target>
     </properties>
+    <!--我们在引用其他第三方库的时候，也是通过这3个变量确定。例如，依赖commons-logging：-->
+    <dependency>
+        <groupId>commons-logging</groupId>
+        <artifactId>commons-logging</artifactId>
+        <version>1.2</version>
+    </dependency>
 
 </project>

@@ -1,5 +1,7 @@
 package com.sjli;
 
+import java.util.logging.Logger;
+
 public class D02_Log_Log4j {
     public static void main(String[] args) {
     //使用Log4j
@@ -93,5 +95,10 @@ public class D02_Log_Log4j {
         //最佳实践
         //在开发阶段，始终使用Commons Logging接口来写入日志，并且开发阶段无需引入Log4j。如果需要把日志写入文件，
         // 只需要把正确的配置文件和Log4j相关的jar包放入classpath，就可以自动把日志切换成使用Log4j写入，无需修改任何代码。
+        Logger logger = Logger.getGlobal();
+        logger.info("start process...");
+        logger.warning("memory is running out...");
+        logger.fine("ignored.");
+        logger.severe("process will be terminated...");
     }
 }
