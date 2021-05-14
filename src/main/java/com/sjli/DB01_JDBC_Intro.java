@@ -1,6 +1,6 @@
 package com.sjli;
 
-public class J01_JDBC_Intro {
+public class DB01_JDBC_Intro {
     public static void main(String[] args) {
         //JDBC编程
         /*

@@ -28,7 +28,8 @@ public class M01_Maven_DependencyCtr {
         └──────────────┘
         当我们声明了abc的依赖时，Maven自动把abc和xyz都加入了我们的项目依赖，不需要我们自己去研究abc是否需要依赖xyz。
 
-        因此，Maven的第一个作用就是解决依赖管理。我们声明了自己的项目需要abc，Maven会自动导入abc的jar包，再判断出abc需要xyz，又会自动导入xyz的jar包，这样，最终我们的项目会依赖abc和xyz两个jar包。
+        因此，Maven的第一个作用就是解决依赖管理。我们声明了自己的项目需要abc，Maven会自动导入abc的jar包，
+        再判断出abc需要xyz，又会自动导入xyz的jar包，这样，最终我们的项目会依赖abc和xyz两个jar包。
 
         我们来看一个复杂依赖示例：
 
@@ -90,7 +91,8 @@ public class M01_Maven_DependencyCtr {
             <version>5.1.48</version>
             <scope>runtime</scope>
         </dependency>
-        provided依赖表示编译时需要，但运行时不需要。最典型的provided依赖是Servlet API，编译的时候需要，但是运行时，Servlet服务器内置了相关的jar，所以运行期不需要：
+        provided依赖表示编译时需要，但运行时不需要。最典型的provided依赖是Servlet API，编译的时候需要，
+        但是运行时，Servlet服务器内置了相关的jar，所以运行期不需要：
 
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -98,7 +100,10 @@ public class M01_Maven_DependencyCtr {
             <version>4.0.0</version>
             <scope>provided</scope>
         </dependency>
-        最后一个问题是，Maven如何知道从何处下载所需的依赖？也就是相关的jar包？答案是Maven维护了一个中央仓库（repo1.maven.org），所有第三方库将自身的jar以及相关信息上传至中央仓库，Maven就可以从中央仓库把所需依赖下载到本地。
+        最后一个问题是，Maven如何知道从何处下载所需的依赖？也就是相关的jar包？
+        答案是Maven维护了一个中央仓库（repo1.maven.org），
+
+        所有第三方库将自身的jar以及相关信息上传至中央仓库，Maven就可以从中央仓库把所需依赖下载到本地。
 
         Maven并不会每次都从中央仓库下载jar包。一个jar包一旦被下载过，就会被Maven自动缓存在本地目录（用户主目录的.m2目录），所以，除了第一次编译时因为下载需要时间会比较慢，后续过程因为有本地缓存，并不会重复下载相同的jar包。
 
@@ -142,7 +147,8 @@ public class M01_Maven_DependencyCtr {
         配置镜像仓库后，Maven的下载速度就会非常快。
 
         搜索第三方组件
-        最后一个问题：如果我们要引用一个第三方组件，比如okhttp，如何确切地获得它的groupId、artifactId和version？方法是通过search.maven.org搜索关键字，找到对应的组件后，直接复制：
+        最后一个问题：如果我们要引用一个第三方组件，比如okhttp，如何确切地获得它的groupId、artifactId和version？
+        方法是通过search.maven.org搜索关键字，找到对应的组件后，直接复制：
 
         copy-maven
 
