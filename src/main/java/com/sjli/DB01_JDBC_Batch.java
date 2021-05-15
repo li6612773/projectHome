@@ -65,6 +65,15 @@ public class DB01_JDBC_Batch {
             }
 
         }
+        //执行batch和执行一个SQL不同点在于，需要对同一个PreparedStatement反复设置参数并调用addBatch()，
+        // 这样就相当于给一个SQL加上了多组参数，相当于变成了“多行”SQL。
+        //
+        //第二个不同点是调用的不是executeUpdate()，而是executeBatch()，因为我们设置了多组参数，
+        // 相应地，返回结果也是多个int值，因此返回类型是int[]，循环int[]数组即可获取每组参数执行后影响的结果数量。
+        //修改自增计数器 alter table user auto_increment=1
+
+
+
 
     }
 }
