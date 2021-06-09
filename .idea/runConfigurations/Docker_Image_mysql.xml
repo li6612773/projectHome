@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Docker Image mysql" type="docker-deploy" factoryName="docker-image" server-name="Docker">
+  <configuration default="false" name="Docker Image mysql" type="docker-deploy" factoryName="docker-image" editBeforeRun="true" server-name="Docker">
     <deployment type="docker-image">
       <settings>
         <option name="imageTag" value="mysql:latest" />
@@ -19,6 +19,10 @@
             <DockerPortBindingImpl>
               <option name="containerPort" value="3306" />
               <option name="hostPort" value="3306" />
+            </DockerPortBindingImpl>
+            <DockerPortBindingImpl>
+              <option name="containerPort" value="33060" />
+              <option name="hostPort" value="33060" />
             </DockerPortBindingImpl>
           </list>
         </option>
