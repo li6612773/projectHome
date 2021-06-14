@@ -1,7 +1,11 @@
 package com.sjli.basis;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class A02_DataType {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
 
 /*       各种变量占内存大小：
        byte   1字节 = 8位二进制
@@ -53,5 +57,11 @@ public class A02_DataType {
 
 //      var关键字 类型的名字太长，写起来比较麻烦,这个时候，如果想省略变量类型，可以使用var关键字：
         var sb = new StringBuilder();
+        //日期型
+        String strDate = "20210614";
+        Date dt;
+        dt = new SimpleDateFormat("yyyyMMdd").parse(strDate);
+        System.out.println(dt);
+
     }
 }
