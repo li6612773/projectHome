@@ -1,4 +1,4 @@
-package com.sjli;
+package com.sjli.log;
 
 public class D02_Log_SLF4J {
     /*

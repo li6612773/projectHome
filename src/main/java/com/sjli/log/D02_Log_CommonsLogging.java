@@ -1,7 +1,6 @@
-package com.sjli;
+package com.sjli.log;
 
 
-import com.sun.tools.javac.Main;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 

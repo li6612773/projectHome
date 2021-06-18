@@ -1,4 +1,4 @@
-package com.sjli;
+package com.sjli.db;
 
 public class DB01_JDBC_Intro {
     public static void main(String[] args) {

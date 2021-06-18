@@ -1,4 +1,4 @@
-package com.sjli;
+package com.sjli.db;
 
 import java.sql.*;
 

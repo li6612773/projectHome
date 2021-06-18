@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Docker Image mysql" type="docker-deploy" factoryName="docker-image" editBeforeRun="true" server-name="Docker">
+  <configuration default="false" name="mysql-Docker" type="docker-deploy" factoryName="docker-image" editBeforeRun="true" server-name="Docker">
     <deployment type="docker-image">
       <settings>
         <option name="imageTag" value="mysql:latest" />
@@ -27,6 +27,14 @@
           </list>
         </option>
         <option name="commandLineOptions" value="" />
+        <option name="volumeBindings">
+          <list>
+            <DockerVolumeBindingImpl>
+              <option name="containerPath" value="/var/lib/mysql" />
+              <option name="hostPath" value="D:\JGDocuments\我的坚果云\workspace\DockerVolumeBindings\mysql" />
+            </DockerVolumeBindingImpl>
+          </list>
+        </option>
       </settings>
     </deployment>
     <method v="2" />

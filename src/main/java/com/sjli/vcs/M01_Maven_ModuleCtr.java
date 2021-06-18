@@ -1,4 +1,4 @@
-package com.sjli;
+package com.sjli.vcs;
 
 public class M01_Maven_ModuleCtr {
     public static void main(String[] args) {

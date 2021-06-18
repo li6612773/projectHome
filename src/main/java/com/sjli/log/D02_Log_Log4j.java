@@ -1,4 +1,4 @@
-package com.sjli;
+package com.sjli.log;
 
 import java.util.logging.Logger;
 

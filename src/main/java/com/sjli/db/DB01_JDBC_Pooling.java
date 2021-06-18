@@ -1,4 +1,4 @@
-package com.sjli;
+package com.sjli.db;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
