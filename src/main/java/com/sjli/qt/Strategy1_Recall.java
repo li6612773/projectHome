@@ -17,6 +17,7 @@ public class Strategy1_Recall {
 
         ShareHold[] sh = new ShareHold[2];
 
+
         sh[0] = new ShareHold("300541.SZ");
         sh[1] = new ShareHold ("300624.SZ");
         sh[0].setShareAmount(buyAmount);
