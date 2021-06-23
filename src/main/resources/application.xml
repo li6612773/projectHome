@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="userService" class="com.sjli.spring.UserService">
+        <property name="mailService" ref="mailService" />
+    </bean>
+
+    <bean id="mailService" class="com.sjli.spring.MailService" />
+
+    <bean id="User" class="com.sjli.spring.User"></bean>
+
+<!--    每个<bean ...>都有一个id标识，相当于Bean的唯一ID；-->
+<!--    在userServiceBean中，通过<property name="..." ref="..." />注入了另一个Bean；-->
+<!--    Bean的顺序不重要，Spring根据依赖关系会自动正确初始化。-->
+<!--    spring的IOC利用了java的反射，而spring的反射要求这个bean必须要有一个无参构造器。-->
+<!--    多嘴一句，并不是说反射一定要有无参构造器，但是spring显然是只能由无参构造器创建新对象的-->
+<!--    Spring实例化bean的策略-->
+<!--    JDK的反射机制-->
+<!--    CGLIB动态代理-->
+    <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource">
+        <property name="jdbcUrl" value="jdbc:mysql://localhost:3306/test" />
+        <property name="username" value="root" />
+        <property name="password" value="password" />
+        <property name="maximumPoolSize" value="10" />
+        <property name="autoCommit" value="true" />
+    </bean>
+<!--    如果注入的不是Bean，而是boolean、int、String这样的数据类型，则通过value注入，例如，创建一个HikariDataSource：-->
+</beans>
