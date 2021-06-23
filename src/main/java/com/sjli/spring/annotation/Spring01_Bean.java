@@ -1,9 +1,7 @@
-package com.sjli.spring;
+package com.sjli.spring.annotation;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import java.sql.SQLOutput;
 
 public class Spring01_Bean {
     public static void main(String[] args) {

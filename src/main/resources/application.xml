@@ -3,13 +3,13 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="userService" class="com.sjli.spring.UserService">
+    <bean id="userService" class="com.sjli.spring.bean.UserService">
         <property name="mailService" ref="mailService" />
     </bean>
 
-    <bean id="mailService" class="com.sjli.spring.MailService" />
+    <bean id="mailService" class="com.sjli.spring.bean.MailService" />
 
-    <bean id="User" class="com.sjli.spring.User"></bean>
+    <bean id="User" class="com.sjli.spring.bean.User"></bean>
 
 <!--    每个<bean ...>都有一个id标识，相当于Bean的唯一ID；-->
 <!--    在userServiceBean中，通过<property name="..." ref="..." />注入了另一个Bean；-->

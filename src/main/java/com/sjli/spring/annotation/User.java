@@ -1,4 +1,4 @@
-package com.sjli.spring;
+package com.sjli.spring.annotation;
 
 public class User {
     public User() {

@@ -1,4 +1,4 @@
-package com.sjli.spring;
+package com.sjli.spring.annotation;
 
 import java.util.ArrayList;
 import java.util.List;
