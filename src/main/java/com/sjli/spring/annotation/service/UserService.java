@@ -1,9 +1,29 @@
-package com.sjli.spring.annotation;
+package com.sjli.spring.annotation.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
+//然后，我们给UserService添加一个@Component注解和一个@Autowired注解：
+@Component
 public class UserService {
+    /*
+    使用@Autowired就相当于把指定类型的Bean注入到指定的字段中。和XML配置相比，@Autowired大幅简化了注入，因为它不但可以写在set()方法上，还可以直接写在字段上，甚至可以写在构造方法中：
+
+    @Component
+    public class UserService {
+        MailService mailService;
+
+        public UserService(@Autowired MailService mailService) {
+            this.mailService = mailService;
+        }
+        ...
+    }
+    我们一般把@Autowired写在字段上，通常使用package权限的字段，便于测试。
+     */
+    @Autowired
     private MailService mailService;
 
     public void setMailService(MailService mailService) {
