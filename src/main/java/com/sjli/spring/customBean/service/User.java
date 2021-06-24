@@ -1,4 +1,4 @@
-package com.sjli.spring.custombean.service;
+package com.sjli.spring.customBean.service;
 
 public class User {
     public User() {

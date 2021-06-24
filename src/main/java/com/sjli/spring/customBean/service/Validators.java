@@ -1,4 +1,4 @@
-package com.sjli.spring.custombean.service;
+package com.sjli.spring.customBean.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -45,6 +45,35 @@ Validator的Bean装配为一个List注入进来，这样一来，我们每新增
 
 因为Spring是通过扫描classpath获取到所有的Bean，
 而List是有序的，要指定List中Bean的顺序，可以加上@Order注解：
+
+
+可选注入
+默认情况下，当我们标记了一个@Autowired后，Spring如果没有找到对应类型的Bean，它会抛出NoSuchBeanDefinitionException异常。
+
+可以给@Autowired增加一个required = false的参数：
+
+@Component
+public class MailService {
+    @Autowired(required = false)
+    ZoneId zoneId = ZoneId.systemDefault();
+    ...
+}
+
+创建第三方Bean
+如果一个Bean不在我们自己的package管理之内，例如ZoneId，如何创建它？
+
+答案是我们自己在@Configuration类中编写一个Java方法创建并返回它，注意给方法标记一个@Bean注解：
+
+@Configuration
+@ComponentScan
+public class AppConfig {
+    // 创建一个Bean:
+    @Bean
+    ZoneId createZoneId() {
+        return ZoneId.of("Z");
+    }
+}
+Spring对标记为@Bean的方法只调用一次，因此返回的Bean仍然是单例。
  */
 
 
@@ -60,3 +89,9 @@ public class Validators {
         }
     }
 }
+
+
+
+
+
+
