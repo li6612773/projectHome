@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="mysql-Docker" uuid="2d4d54e8-a4b9-40ba-a476-0ec280dd2a08">
+    <data-source source="LOCAL" name="@localhost" uuid="d74dd672-13c5-478d-a547-990912e767f7">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
