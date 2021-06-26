@@ -1,7 +1,6 @@
-package com.sjli.spring.annotation;
+package com.sjli.spring.IOC.bean;
 
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 
 public class MailService {
@@ -24,7 +23,3 @@ public class MailService {
 
     }
 }
-
-
-
-

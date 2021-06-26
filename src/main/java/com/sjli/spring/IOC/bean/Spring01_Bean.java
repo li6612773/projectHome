@@ -1,4 +1,4 @@
-package com.sjli.spring.annotation;
+package com.sjli.spring.IOC.bean;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

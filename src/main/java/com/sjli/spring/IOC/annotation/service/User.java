@@ -1,4 +1,4 @@
-package com.sjli.spring.bean;
+package com.sjli.spring.IOC.annotation.service;
 
 public class User {
     public User() {
