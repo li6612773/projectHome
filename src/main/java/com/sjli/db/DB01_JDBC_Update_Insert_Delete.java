@@ -15,7 +15,7 @@ public class DB01_JDBC_Update_Insert_Delete {
         // 而是executeUpdate()。示例代码如下：
         String JDBC_URL = "jdbc:mysql://localhost:3306/learnjdbc";
         String JDBC_USER = "root";
-        String JDBC_PASSWORD = "lishijin123";
+        String JDBC_PASSWORD = "12345";
         try (Connection conn = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASSWORD)) {
             try (PreparedStatement ps = conn.prepareStatement(
                     "INSERT INTO students (id, grade, name, gender,score) VALUES (?,?,?,?,?)")) {

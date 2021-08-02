@@ -1,6 +1,6 @@
--- 创建数据库learjdbc:
-DROP DATABASE IF EXISTS learnjdbc;
-CREATE DATABASE learnjdbc;
+-- 创建数据库（模式）
+DROP schema IF EXISTS learnjdbc;
+create schema learnjdbc ;
 
 -- 创建登录用户learn/口令learnpassword
 CREATE USER IF NOT EXISTS learn@'%' IDENTIFIED BY 'learnpassword';
