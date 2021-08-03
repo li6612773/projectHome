@@ -40,7 +40,8 @@ public class MailService {
 public class MailService {
     ...
 }
-后续我们会介绍Spring Boot的条件装配。我们以文件存储为例，假设我们需要保存用户上传的头像，并返回存储路径，在本地开发运行时，我们总是存储到文件：
+后续我们会介绍Spring Boot的条件装配。我们以文件存储为例，假设我们需要保存用户上传的头像，
+并返回存储路径，在本地开发运行时，我们总是存储到文件：
 
 @Component
 @ConditionalOnProperty(name = "app.storage", havingValue = "file", matchIfMissing = true)
@@ -61,7 +62,8 @@ public class UserImageService {
     @Autowired
     Uploader uploader;
 }
-当应用程序检测到配置文件存在app.storage=s3时，自动使用S3Uploader，如果存在配置app.storage=file，或者配置app.storage不存在，则使用FileUploader。
+当应用程序检测到配置文件存在app.storage=s3时，自动使用S3Uploader，如果存在配置app.storage=file，
+或者配置app.storage不存在，则使用FileUploader。
 
 可见，使用条件注解，能更灵活地装配Bean。
  */
