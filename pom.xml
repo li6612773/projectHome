@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- groupId类似于Java的包名，通常是公司或组织名称 -->
-    <groupId>org.example</groupId>
+    <groupId>com.sjli</groupId>
     <!--artifactId类似于Java的类名，通常是项目名称-->
     <artifactId>projectHome</artifactId>
     <!--再加上version，一个Maven工程就是由groupId，artifactId和version作为唯一标识。-->
@@ -42,7 +42,7 @@
         <dependency>
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
-            <version>1.1.1</version>
+            <version>1.2</version>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -62,12 +62,12 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-instrument</artifactId>
-            <version>5.3.8</version>
+            <version>5.3.9</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
-            <version>5.3.8</version>
+            <version>5.3.9</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -87,7 +87,7 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aspects</artifactId>
-            <version>5.3.8</version>
+            <version>5.3.9</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
