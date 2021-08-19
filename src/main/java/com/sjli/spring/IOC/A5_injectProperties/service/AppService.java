@@ -1,16 +1,4 @@
-package com.sjli.spring.IOC.useResource.service;
-
-
-/*
-在Java程序中，我们经常会读取配置文件、资源文件等。使用Spring容器时，我们也可以把“文件”注入进来，
-方便程序读取。
-
-例如，AppService需要读取logo.txt这个文件，通常情况下，我们需要写很多繁琐的代码，
-主要是为了定位文件，打开InputStream。
-
-Spring提供了一个org.springframework.core.io.Resource
-（注意不是javax.annotation.Resource），它可以像String、int一样使用@Value注入：
- */
+package com.sjli.spring.IOC.A5_injectProperties.service;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
@@ -22,6 +10,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
 import java.util.stream.Collectors;
+
+
 
 @Component
 public class AppService {

@@ -1,7 +1,7 @@
-package com.sjli.spring.IOC.conditional;
+package com.sjli.spring.IOC.A6_conditional;
 
 
-import com.sjli.spring.IOC.useResource.service.AppService;
+import com.sjli.spring.IOC.A4_useResource.service.AppService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
 

@@ -141,12 +141,13 @@ public class AppConfig {
     //答案是我们自己在@Configuration类中编写一个Java方法创建并返回它，注意给方法标记一个@Bean注解：
     //Spring对标记为@Bean的方法只调用一次，因此返回的Bean仍然是单例。
     @Bean
-    @Primary //指定为主要Bean
+    @Primary //指定为主要Bean,这样，在注入时，如果没有指出Bean的名字，Spring会注入标记有@Primary的Bean。
     @Qualifier("z")
     ZoneId createZoneId(){
         return ZoneId.of("Z");
     }
 
+    //可以用@Bean("name")指定别名，也可以用@Bean+@Qualifier("name")指定别名。
     @Bean
     @Qualifier("utc8")
     ZoneId createZoneOfUTC8(){

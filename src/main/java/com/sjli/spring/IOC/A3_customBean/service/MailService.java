@@ -52,11 +52,13 @@ public class MailService {
     @Autowired(required = false)
     private ZoneId zoneId = ZoneId.systemDefault();
 
+    //在Bean的初始化和清理方法上标记@PostConstruct和@PreDestroy：
     @PostConstruct
     public void init(){
         System.out.println("Init mail service with zoneId= " + this.zoneId);
     }
 
+    //而销毁时，容器会首先调用标记有@PreDestroy的shutdown()方法。
     @PreDestroy
     public void shutdown(){
         System.out.println("Shutdown mail service");

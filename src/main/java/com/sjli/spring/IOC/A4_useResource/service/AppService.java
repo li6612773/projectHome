@@ -1,4 +1,4 @@
-package com.sjli.spring.IOC.injectProperties.service;
+package com.sjli.spring.IOC.A4_useResource.service;
 
 
 /*
@@ -25,14 +25,17 @@ import java.util.stream.Collectors;
 
 @Component
 public class AppService {
+
     @Value("classpath:/logo.txt")
     private Resource resource;
+
+    private String logo;
 
     public String getLogo() {
         return logo;
     }
 
-    private String logo;
+
 
     @PostConstruct
     public void init() throws IOException {
