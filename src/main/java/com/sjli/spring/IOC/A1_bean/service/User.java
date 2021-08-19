@@ -1,4 +1,4 @@
-package com.sjli.spring.IOC.bean;
+package com.sjli.spring.IOC.A1_bean.service;
 
 public class User {
     public User() {

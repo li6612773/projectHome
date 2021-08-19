@@ -1,4 +1,4 @@
-package com.sjli.spring.IOC.bean;
+package com.sjli.spring.IOC.A1_bean.service;
 
 import java.util.ArrayList;
 import java.util.List;

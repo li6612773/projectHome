@@ -1,9 +1,17 @@
-package com.sjli.spring.IOC.bean;
+package com.sjli.spring.IOC.A1_bean;
 
+import com.sjli.spring.IOC.A1_bean.service.User;
+import com.sjli.spring.IOC.A1_bean.service.UserService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class Spring01_Bean {
+/**
+ * @Classname Main
+ * @Description TODO
+ * @Date 2021/8/19 14:29
+ * @Created by steven
+ */
+public class Main {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
 //        以看到，Spring容器就是ApplicationContext，它是一个接口，有很多实现类，
@@ -22,5 +30,4 @@ public class Spring01_Bean {
         User user = userService.login("bob@example.com", "password");
         System.out.println(user.getName());
     }
-
 }
