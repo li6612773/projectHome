@@ -1,7 +1,6 @@
 package com.sjli.spring.IOC.A6_conditional;
 
 
-import com.sjli.spring.IOC.A4_useResource.service.AppService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
 
@@ -102,9 +101,5 @@ public class AppConfig {
 
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-        AppService appService = context.getBean(AppService.class);
-        System.out.println(appService.toString());
-        String logo  = appService.getLogo();
-        System.out.println(logo);
     }
 }

@@ -1,14 +1,13 @@
 package com.sjli.spring.usedb.useJDBC;
 
 
+import com.sjli.spring.IOC.A4_useResource.service.AppService;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.*;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
@@ -60,5 +59,13 @@ public class AppConfig {
     @Bean
     JdbcTemplate createJdbcTemplate(@Autowired DataSource dataSource) {
         return new JdbcTemplate(dataSource);
+    }
+
+    public static void main(String[] args) {
+        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        AppService appService = context.getBean(AppService.class);
+        System.out.println(appService.toString());
+        String logo  = appService.getLogo();
+        System.out.println(logo);
     }
 }
