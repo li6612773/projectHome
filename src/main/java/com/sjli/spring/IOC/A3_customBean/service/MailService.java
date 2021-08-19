@@ -1,4 +1,4 @@
-package com.sjli.spring.IOC.customBean.service;
+package com.sjli.spring.IOC.A3_customBean.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -47,8 +47,11 @@ Spring只根据Annotation查找无参数方法，对方法名不作要求。
 
 @Component
 public class MailService {
+
+    //这个参数告诉Spring容器，如果找到一个类型为ZoneId的Bean，就注入，如果找不到，就忽略。
     @Autowired(required = false)
     private ZoneId zoneId = ZoneId.systemDefault();
+
     @PostConstruct
     public void init(){
         System.out.println("Init mail service with zoneId= " + this.zoneId);

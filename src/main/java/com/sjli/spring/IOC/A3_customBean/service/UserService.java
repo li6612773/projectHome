@@ -1,4 +1,4 @@
-package com.sjli.spring.IOC.customBean.service;
+package com.sjli.spring.IOC.A3_customBean.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

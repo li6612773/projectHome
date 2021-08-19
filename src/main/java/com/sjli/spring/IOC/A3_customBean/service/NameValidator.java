@@ -1,4 +1,4 @@
-package com.sjli.spring.IOC.customBean.service;
+package com.sjli.spring.IOC.A3_customBean.service;
 
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;

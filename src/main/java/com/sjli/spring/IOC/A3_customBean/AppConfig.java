@@ -1,7 +1,7 @@
-package com.sjli.spring.IOC.customBean;
+package com.sjli.spring.IOC.A3_customBean;
 
-import com.sjli.spring.IOC.customBean.service.User;
-import com.sjli.spring.IOC.customBean.service.UserService;
+import com.sjli.spring.IOC.A3_customBean.service.User;
+import com.sjli.spring.IOC.A3_customBean.service.UserService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
@@ -137,6 +137,9 @@ public class AppConfig {
 @ComponentScan
 public class AppConfig {
 
+    //如果一个Bean不在我们自己的package管理之内，例如ZoneId，如何创建它？
+    //答案是我们自己在@Configuration类中编写一个Java方法创建并返回它，注意给方法标记一个@Bean注解：
+    //Spring对标记为@Bean的方法只调用一次，因此返回的Bean仍然是单例。
     @Bean
     @Primary //指定为主要Bean
     @Qualifier("z")
