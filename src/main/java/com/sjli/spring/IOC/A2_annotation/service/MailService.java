@@ -1,4 +1,4 @@
-package com.sjli.spring.IOC.annotation.service;
+package com.sjli.spring.IOC.A2_annotation.service;
 
 import org.springframework.stereotype.Component;
 

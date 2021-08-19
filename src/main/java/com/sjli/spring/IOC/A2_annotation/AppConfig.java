@@ -1,7 +1,7 @@
-package com.sjli.spring.IOC.annotation;
+package com.sjli.spring.IOC.A2_annotation;
 
-import com.sjli.spring.IOC.annotation.service.User;
-import com.sjli.spring.IOC.annotation.service.UserService;
+import com.sjli.spring.IOC.A2_annotation.service.User;
+import com.sjli.spring.IOC.A2_annotation.service.UserService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
@@ -12,7 +12,10 @@ import org.springframework.context.annotation.Configuration;
 
 //        ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
 
+//使用的实现类是AnnotationConfigApplicationContext，必须传入一个标注了@Configuration的类名。
 
+//此外，AppConfig还标注了@ComponentScan，它告诉容器，自动搜索当前类所在的包以及子包，
+// 把所有标注为@Component的Bean自动创建出来，并根据@Autowired进行装配。
 @Configuration
 @ComponentScan
 public class AppConfig {
