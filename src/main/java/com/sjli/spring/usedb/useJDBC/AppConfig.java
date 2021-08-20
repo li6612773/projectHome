@@ -9,6 +9,9 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.*;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
@@ -32,6 +35,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @ComponentScan
+@EnableTransactionManagement //启用事务声明
 @PropertySource("jdbc.properties")
 public class AppConfig {
 
@@ -59,6 +63,13 @@ public class AppConfig {
     @Bean
     JdbcTemplate createJdbcTemplate(@Autowired DataSource dataSource) {
         return new JdbcTemplate(dataSource);
+    }
+
+    //Spring为了同时支持JDBC和JTA两种事务模型，就抽象出PlatformTransactionManager。因为我们的代码只需要JDBC事务，
+    // 因此，在AppConfig中，需要再定义一个PlatformTransactionManager对应的Bean，它的实际类型是DataSourceTransactionManager：
+    @Bean
+    PlatformTransactionManager createTxManager(@Autowired DataSource dataSource){
+        return new DataSourceTransactionManager(dataSource);
     }
 
     public static void main(String[] args) {
