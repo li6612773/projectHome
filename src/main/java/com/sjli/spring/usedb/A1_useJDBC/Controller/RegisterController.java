@@ -1,7 +1,7 @@
-package com.sjli.spring.usedb.useJDBC.Controller;
+package com.sjli.spring.usedb.A1_useJDBC.Controller;
 
-import com.sjli.spring.usedb.useJDBC.service.User;
-import com.sjli.spring.usedb.useJDBC.service.UserService;
+import com.sjli.spring.usedb.A1_useJDBC.service.User;
+import com.sjli.spring.usedb.A1_useJDBC.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
