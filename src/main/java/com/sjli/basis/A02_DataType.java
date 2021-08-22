@@ -63,5 +63,12 @@ public class A02_DataType {
         dt = new SimpleDateFormat("yyyyMMdd").parse(strDate);
         System.out.println(dt);
 
+        //类型转换
+        //int 转 string
+        int i=12345;
+        String s="";
+        s=i+""; // 第一种方法：
+        s=String.valueOf(i); //第二种方法：
+
     }
 }

@@ -1,10 +1,15 @@
 package com.sjli.spring.usedb.A1_useJDBC.service;
 
+import java.nio.CharBuffer;
+
 public class User {
     public long id;
+    private String name;
+    public CharBuffer number;
 
-    public User() {
-        
+    public User(String name, String number) {
+        this.name = name;
+        this.number  = CharBuffer.wrap(number.toCharArray());
     }
 
     public int getId() {
@@ -40,6 +45,7 @@ public class User {
         Password = password;
         Name = name;
     }
+
 
     public String getEmail() {
         return Email;

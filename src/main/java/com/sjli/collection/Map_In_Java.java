@@ -43,5 +43,8 @@ public class Map_In_Java {
             Integer value = entry.getValue();
             System.out.println(key + " = " + value);
         }
+        String i= "1";
+        System.out.println(i.hashCode());
+
     }
 }
