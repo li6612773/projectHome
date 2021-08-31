@@ -7,6 +7,7 @@ package com.sjli.basis;
  * @Created by steven
  */
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -33,7 +34,7 @@ import java.util.TimeZone;
  * 为什么会有新旧两套API呢？因为历史遗留原因，旧的API存在很多问题，所以引入了新的API。
  */
 public class A08_DateAndTime_DateAndCalender {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         // 获取当前时间:
         Date date = new Date();
         //注意getYear()返回的年份必须加上1900，getMonth()返回的月份是0~11分别表示1~12月，
@@ -136,5 +137,24 @@ public class A08_DateAndTime_DateAndCalender {
         Date d4 = c4.getTime();
         System.out.println(sdf.format(d4));
         // 2019-11-25 6:15:00
+
+        //使用字符串初始化Date
+
+        String dateString ="2018-02-23";
+        Date date5= new SimpleDateFormat("yyyy-MM-dd").parse(dateString);
+
+        //获取前一日（正确方式）
+        SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd");
+        Date day = sdf1.parse("2017-01-01");
+
+        long ms1 = day.getTime() - 1*24*3600*1000L;
+        Date prevDay = new Date(ms1);
+        System.out.println(sdf1.format(prevDay));
+
+        //两个日期比大小
+        if(date5.before(date)) System.out.println("date5 smaller than date");
+        if(date5.after(date)) System.out.println("date5 bigger than date");
+
     }
+
 }
