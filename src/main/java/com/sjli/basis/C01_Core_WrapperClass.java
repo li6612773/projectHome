@@ -54,20 +54,20 @@ public class C01_Core_WrapperClass {
         //我们可以直接使用，并不需要自己去定义：
         int i = 100;
         // 通过new操作符创建Integer实例(不推荐使用,会有编译警告):
-        Integer n1 = new Integer(i);
+        Integer n1 = i;
         // 通过静态方法valueOf(int)创建Integer实例:
-        Integer n2 = Integer.valueOf(i);
+        Integer n2 = i;
         // 通过静态方法valueOf(String)创建Integer实例:
-        Integer n3 = Integer.valueOf("100");
-        System.out.println(n3.intValue());
+        int n3 = Integer.parseInt("100");
+        System.out.println((int) n3);
 
     //Auto Boxing 自动装箱
         //因为int和Integer可以互相转换：
         int i2 = 100;
-        Integer n = Integer.valueOf(i2);
-        int x = n.intValue();
+        int n = i2;
+        int x = n;
         //所以，Java编译器可以帮助我们自动在int和Integer之间转型：
-        Integer n5 = 100; // 编译器自动使用Integer.valueOf(int)
+        int n5 = 100; // 编译器自动使用Integer.valueOf(int)
         int x5= n5; // 编译器自动使用Integer.intValue()
         //这种直接把int变为Integer的赋值写法，称为自动装箱（Auto Boxing），
         // 反过来，把Integer变为int的赋值写法，称为自动拆箱（Auto Unboxing）。
@@ -156,7 +156,7 @@ public class C01_Core_WrapperClass {
         //最后，所有的整数和浮点数的包装类型都继承自Number，
         // 因此，可以非常方便地直接通过包装类型获取各种基本类型：
         // 向上转型为Number:
-        Number num = new Integer(999);
+        Number num = 999;
         // 获取byte, int, long, float, double:
         byte b8 = num.byteValue();
         int n8 = num.intValue();

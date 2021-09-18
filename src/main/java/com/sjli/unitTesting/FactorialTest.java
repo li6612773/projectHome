@@ -1,12 +1,14 @@
 package com.sjli.unitTesting;
 
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class FactorialTest {
 
     @Test
-    void testFact() {
+    public void testFact() {
         assertEquals(1, Factorial.fact(1));
         assertEquals(2, Factorial.fact(2));
         assertEquals(6, Factorial.fact(3));
