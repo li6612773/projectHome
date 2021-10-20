@@ -50,11 +50,12 @@ public class MailService {
 
     //这个参数告诉Spring容器，如果找到一个类型为ZoneId的Bean，就注入，如果找不到，就忽略。
     @Autowired(required = false)
-    private ZoneId zoneId = ZoneId.systemDefault();
+    private ZoneId zoneId ;
 
     //在Bean的初始化和清理方法上标记@PostConstruct和@PreDestroy：
     @PostConstruct
     public void init(){
+        zoneId = ZoneId.systemDefault();
         System.out.println("Init mail service with zoneId= " + this.zoneId);
     }
 

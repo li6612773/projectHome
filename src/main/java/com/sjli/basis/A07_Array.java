@@ -1,7 +1,10 @@
 package com.sjli.basis;
 
+import java.util.Arrays;
+
 public class A07_Array {
     public static void main(String[] args) {
+
     //数组类型
         //如果我们有一组类型相同的变量，例如，5位同学的成绩，可以这么写：
         // 5位同学的成绩:
@@ -81,6 +84,39 @@ public class A07_Array {
         String s1 = names1[1];
         names1[1] = "cat";
         System.out.println(s1); // s是"XYZ"还是"cat"?
+        //比较两个字符串数组是否相等
+        String[] a = {"ABC", "XYZ", "zoo"};
+        String[] b = {"ABC", "XYZ", "zoo"};
+        if(a == b) System.out.println("相等？"+a+"     "+b);else System.out.println("不相等？"+a+"     "+b);
 
+        if(a.toString().equals(b.toString()) ) {
+            System.out.println("相等？"+a.toString()+"     "+b.toString());
+        }else {
+            System.out.println("不相等？"+a.toString()+"     "+b.toString());
+        }
+        if(Arrays.equals(a,b)) {
+            System.out.println("相等！！！！");
+        }else {
+            System.out.println("不相等！！！！");
+        }
+        if(compare(a,b)) {
+            System.out.println("相等！！！！");
+        }else {
+            System.out.println("不相等！！！！");
+        }
+
+
+    }
+    public static boolean compare(String[] a, String[] b){
+        if(a.length == b.length){//先判断数组的长度是否相等
+            for(int i = 0; i < a.length; i ++){//在判断内容是否相等
+                if((a[i].equals(b[i]))!= true){
+                    return false;
+                }
+            }
+        }else{
+            return true;
+        }
+        return true;
     }
 }

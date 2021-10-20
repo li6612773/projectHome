@@ -155,6 +155,17 @@ public class A08_DateAndTime_DateAndCalender {
         if(date5.before(date)) System.out.println("date5 smaller than date");
         if(date5.after(date)) System.out.println("date5 bigger than date");
 
+
+        sdf=new SimpleDateFormat("yyyy-MM-dd");
+        date5=sdf.parse(sdf.format(date5));
+        date=sdf.parse(sdf.format(date));
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(date5);
+        long time1 = cal.getTimeInMillis();
+        cal.setTime(date);
+        long time2 = cal.getTimeInMillis();
+        long between_days=(time2-time1)/(1000*3600*24);
+
     }
 
 }

@@ -1,5 +1,7 @@
 package com.sjli.basis;
 
+import static java.lang.Math.round;
+
 public class C01_Core_Math {
     public static void main(String[] args) {
     //Math
@@ -51,5 +53,11 @@ public class C01_Core_Math {
         // 计算的结果可能不一致（指误差不同），因此，StrictMath
         // 保证所有平台计算结果都是完全相同的，而Math会尽量针对平台优化计算速度，
         // 所以，绝大多数情况下，使用Math就足够了。
+
+        // 四舍五入
+        double d1 = 111.251111;
+        d1 = (double) round(d1*100)/100;
+
+        System.out.println(Math.ceil(12.333));
     }
 }
